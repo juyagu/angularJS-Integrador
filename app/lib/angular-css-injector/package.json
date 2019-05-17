@@ -1,0 +1,48 @@
+{
+  "_from": "angular-css-injector",
+  "_id": "angular-css-injector@1.0.4",
+  "_inBundle": false,
+  "_integrity": "sha1-zfGhjUVVERbBe23jxlNpm2FEG3U=",
+  "_location": "/angular-css-injector",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "angular-css-injector",
+    "name": "angular-css-injector",
+    "escapedName": "angular-css-injector",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-css-injector/-/angular-css-injector-1.0.4.tgz",
+  "_shasum": "cdf1a18d45551116c17b6de3c653699b61441b75",
+  "_spec": "angular-css-injector",
+  "_where": "E:\\EducacionIT\\AngularJS\\Clase4\\Integrador",
+  "authors": [
+    "Gabriel Delépine <yappli@github.com>"
+  ],
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "angularJS service to load dynamically CSS files",
+  "homepage": "https://github.com/Yappli/angular-css-injector",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "angularjs",
+    "css"
+  ],
+  "license": "MIT",
+  "main": "angular-css-injector.js",
+  "name": "angular-css-injector",
+  "version": "1.0.4"
+}

@@ -1,0 +1,57 @@
+<h1>{{$ctrl.titulo}}</h1>
+<div class="alert alert-success" role="alert" ng-show="$ctrl.success">
+  {{$ctrl.mensaje}}
+</div>
+<div class="alert alert-danger" role="alert" ng-show="$ctrl.error">
+  {{$ctrl.mensaje}}
+</div>
+<section ng-hide="$ctrl.detalle">
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Titulo</th>
+        <th>Director</th>
+        <th>Genero</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="pelicula in $ctrl.peliculas" ng-click="$ctrl.getPeliculaXID(pelicula.id)">
+        <td>{{pelicula.id}}</td>
+        <td>{{pelicula.titulo}}</td>
+        <td>{{pelicula.director}}</td>
+        <td>{{pelicula.genero}}</td>
+        <td><img ng-src="{{pelicula.foto}}"></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<div ng-show="$ctrl.detalle">
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="">Titulo</label>
+        <input type="text" class="form-control" ng-model="$ctrl.peliculaSelect.titulo">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="">Director</label>
+        <input type="text" class="form-control" ng-model="$ctrl.peliculaSelect.director">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="">Genero</label>
+        <!--<input type="text" class="form-control" ng-model="$ctrl.peliculaSelect.genero">-->
+        <select ng-options="genero.id_genero as genero.descripcion for genero in $ctrl.generos" ng-model="$ctrl.peliculaSelect.id_genero" class="form-control"></select>
+      </div>
+    </div>
+    <div class="col-1 pt-31">
+      <button class="btn btn-success" ng-click="$ctrl.modificarPelicula()">Aceptar</button>
+    </div>
+  </div>
+</div>
