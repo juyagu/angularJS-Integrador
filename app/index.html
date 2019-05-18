@@ -15,12 +15,17 @@
   <script src="listado-peliculas/listado-peliculas.controller.js"></script>
   <script src="detalle-peliculas/detalle-peliculas.module.js"></script>
   <script src="detalle-peliculas/detalle-peliculas.controller.js"></script>
+  <script src="navbar/navbar.module.js"></script>
+  <script src="navbar/navbar.component.js"></script>
+  <script src="nueva-pelicula/nueva-pelicula.module.js"></script>
+  <script src="nueva-pelicula/nueva-pelicula.component.js"></script>
   <script src="lib/angular-css-injector/angular-css-injector.min.js"></script>
   <script src="servicios/peliculas.service.js"></script>
 </head>
 <body>
+  <navbar></navbar>
   <div class="container">
-    <listado-peliculas></listado-peliculas>
+      <div ng-view></div>
   </div>
 </body>
 </html>

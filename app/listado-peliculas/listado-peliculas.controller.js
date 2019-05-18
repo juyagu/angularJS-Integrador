@@ -2,7 +2,7 @@ angular
   .module('listadoPeliculasModule')
   .component('listadoPeliculas', {
     templateUrl: 'listado-peliculas/listado-peliculas.template.html',
-    controller: function ListadoPeliculasController(cssInjector, $q, PeliculasService, $log) {
+    controller: function ListadoPeliculasController(cssInjector, $q, PeliculasService, $log,$location) {
       cssInjector.add('listado-peliculas/listado-peliculas.styles.css');
       this.titulo = "Listado de peliculas";
       let me = this;
@@ -26,7 +26,7 @@ angular
       }
 
       me.getPeliculaXID = function getPeliculaXID(idPelicula) {
-        me.success = false;
+        /*me.success = false;
         me.error = false;
         PeliculasService.obtenerPeliculaXID(idPelicula)
           .then(response => {
@@ -34,7 +34,8 @@ angular
             me.peliculaSelect = response;
             me.generoSelected = response.id_genero;
             console.log(me.peliculaSelect);
-          })
+          })*/
+          $location.path("pelicula/"+idPelicula);
       }
 
       me.modificarPelicula = function modificarPelicula(){

@@ -1,1 +1,1 @@
-app.module('detallePeliculasModule',[]);
+angular.module('detallePeliculasModule',[]);
